@@ -1,0 +1,64 @@
+<ion-view  view-title="Mostrar Seguro Médico">
+  <ion-header-bar>
+    <h1 class="title">Seguro Médico - Reporte</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeForm()">Close</button>
+    </div>
+  </ion-header-bar>
+
+  <ion-content>
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">NIF:</span>
+          <input type="text" value="{{ dataForm.nif }}">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Nombre</span>
+          <input type="text" value="{{ dataForm.name }}">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Apelldio</span>
+          <input type="text" value="{{ dataForm.lastName }}">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Edad</span>
+          <input type="number" value="{{ dataForm.age }}">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Sexo</span>
+          <span ng-if="dataForm.sex == 'M'" class="input-label">Masculino</span>
+          <span ng-if="dataForm.sex == 'F'" class="input-label">Femenino</span>
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Casada</span>
+          <span ng-if="dataForm.married == true" class="input-label">Si esta casada</span>
+          <span ng-if="dataForm.married == false" class="input-label">No esta casada</span>
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">N° Hijos</span>
+          <input type="number" value="{{ dataForm.children }}">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Embarazada</span>
+          <span ng-if="dataForm.pregnant == true" class="input-label">Si esta embarazada</span>
+          <span ng-if="dataForm.pregnant == false" class="input-label">No esta embarazada</span>
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Fecha de creación</span>
+          <span class="input-label">{{ dataForm.date | date: 'dd-MM-yyyy' }}</span>
+        </label>
+
+        <label class="item">
+          <button class="button button-block button-dark" ng-click="closeForm()">Volver</button>
+        </label>
+      </div>
+  </ion-content>
+</ion-view>

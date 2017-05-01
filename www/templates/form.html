@@ -1,0 +1,63 @@
+<ion-view view-title="Formulario Seguro Médico">
+  <ion-content>
+    <form name="formInsurance" novalidate>
+      <ion-list>
+        <label class="item item-input">
+          <span class="input-label">NIF:</span>
+          <input type="text" ng-model="dataForm.nif" required>
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Nombre</span>
+          <input type="text" ng-model="dataForm.name" required>
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Apelldio</span>
+          <input type="text" ng-model="dataForm.lastName" required>
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Edad</span>
+          <input type="number" ng-model="dataForm.age" required>
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Sexo</span>
+          <select type="checkbox" ng-model="dataForm.sex" required>
+            <option value="">Elige Opcion</option>
+            <option value="M">Masculino</option>
+            <option value="F">Femenino</option>
+          </select>
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Casado</span>
+          <ion-checkbox ng-model="dataForm.married"></ion-checkbox>
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">N° Hijos</span>
+          <input type="number" ng-model="dataForm.children" required>
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Embarazada</span>
+          <ion-checkbox ng-model="dataForm.pregnant"></ion-checkbox>
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Fecha de creación</span>
+          <input type="date" ng-model="dataForm.date" required>
+        </label>
+      </ion-list>
+
+      <label class="padding">
+        <button class="button button-block button-positive" ng-disabled="formInsurance.$invalid" ng-click="doForm()">
+          Guardar
+        </button>
+      </label>
+
+    </form>
+  </ion-content>
+</ion-view>
